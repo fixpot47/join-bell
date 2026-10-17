@@ -9,10 +9,9 @@ base {
     archivesName = project.archives_base_name
 }
 
-repositories {
-    maven {
-        name = 'Modrinth'
-        url = 'https://api.modrinth.com/maven'
+sourceSets {
+    fixlibApi {
+        java.srcDir 'src/fixlibApi/java'
     }
 }
 
@@ -21,9 +20,14 @@ dependencies {
     implementation "net.fabricmc:fabric-loader:${project.loader_version}"
     implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-    // FixLib 2.2.0 keeps ukulib's public Java API/package layout.
-    // Compile against the matching upstream API while requiring FixLib at runtime.
-    compileOnly "maven.modrinth:ukulib:2.2.0+26.3"
+    // Compile-only API bridge for FixLib while its 26.3 artifact is not yet
+    // available from a public Maven repository. The class is NOT packaged
+    // into JoinBell; at runtime the real class is provided by required FixLib.
+    compileOnly sourceSets.fixlibApi.output
+}
+
+tasks.named('compileJava') {
+    dependsOn tasks.named('compileFixlibApiJava')
 }
 
 processResources {
