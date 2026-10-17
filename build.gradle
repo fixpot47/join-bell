@@ -19,11 +19,11 @@ repositories {
 dependencies {
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
     implementation "net.fabricmc:fabric-loader:${project.loader_version}"
-    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+    implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
     // FixLib 2.2.0 keeps ukulib's public Java API/package layout.
     // Compile against the matching upstream API while requiring FixLib at runtime.
-    modCompileOnly "maven.modrinth:ukulib:2.2.0+26.3"
+    compileOnly "maven.modrinth:ukulib:2.2.0+26.3"
 }
 
 processResources {
