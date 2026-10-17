@@ -1,0 +1,11 @@
+{
+  "key.joinbell.open_menu": "Open JoinBell menu",
+  "joinbell.screen.title": "JoinBell",
+  "joinbell.screen.hint": "Track players and ring a bell when they join",
+  "joinbell.add": "Add",
+  "joinbell.remove": "Remove",
+  "joinbell.done": "Done",
+  "joinbell.empty": "No tracked players yet",
+  "joinbell.input": "Player name",
+  "joinbell.joined": "%s joined the server!"
+}
