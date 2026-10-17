@@ -1,0 +1,11 @@
+{
+  "key.joinbell.open_menu": "Открыть меню JoinBell",
+  "joinbell.screen.title": "JoinBell",
+  "joinbell.screen.hint": "Добавляй игроков и получай звонок, когда они заходят",
+  "joinbell.add": "Добавить",
+  "joinbell.remove": "Удалить",
+  "joinbell.done": "Готово",
+  "joinbell.empty": "Список игроков пока пуст",
+  "joinbell.input": "Ник игрока",
+  "joinbell.joined": "%s зашёл на сервер!"
+}
