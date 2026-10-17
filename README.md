@@ -16,6 +16,8 @@ JoinBell can only detect information that the server sends to your client. On a 
 
 ## Building
 
+Every push and pull request is compiled automatically with GitHub Actions.
+
 The project is configured for:
 
 - Minecraft 26.3
