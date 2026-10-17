@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "joinbell",
+  "version": "${version}",
+  "name": "JoinBell",
+  "description": "Plays a bell when a tracked player joins the server you are currently on.",
+  "authors": ["fixpot47"],
+  "contact": {
+    "homepage": "https://github.com/fixpot47/join-bell",
+    "sources": "https://github.com/fixpot47/join-bell",
+    "issues": "https://github.com/fixpot47/join-bell/issues"
+  },
+  "license": "All-Rights-Reserved",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "dev.fixpot47.joinbell.JoinBellClient"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "fabric-api": "*",
+    "fixlib": ">=2.2.0",
+    "minecraft": "~26.3",
+    "java": ">=25"
+  }
+}
