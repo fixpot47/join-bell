@@ -10,7 +10,6 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientPacketListener;
 import net.minecraft.client.multiplayer.PlayerInfo;
 import net.minecraft.client.resources.sounds.SimpleSoundInstance;
-import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 import net.minecraft.sounds.SoundEvents;
 
@@ -140,12 +139,6 @@ public final class JoinBellClient implements ClientModInitializer {
         this.ringTicksRemaining = Math.max(this.ringTicksRemaining, RING_DURATION_TICKS);
         this.ringInterval = 0;
 
-        if (client.player != null) {
-            client.player.displayClientMessage(
-                    Component.translatable("joinbell.joined", playerName),
-                    false
-            );
-        }
     }
 
     private void tickBell(Minecraft client) {
