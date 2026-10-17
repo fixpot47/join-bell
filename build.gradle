@@ -21,10 +21,9 @@ dependencies {
     implementation "net.fabricmc:fabric-loader:${project.loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-    // FixLib is a real runtime + compile-time dependency.
-    // If the Modrinth Maven artifact is not available yet, temporarily replace
-    // this line with: modImplementation files('libs/fixlib-fabric-2.2.0+26.3.jar')
-    modImplementation "maven.modrinth:fixlib:${project.fixlib_version}"
+    // FixLib 2.2.0 keeps ukulib's public Java API/package layout.
+    // Compile against the matching upstream API while requiring FixLib at runtime.
+    modCompileOnly "maven.modrinth:ukulib:2.2.0+26.3"
 }
 
 processResources {
